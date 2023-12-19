@@ -1,0 +1,40 @@
+name: "Blockchain Extension"
+description: "Lab HCM Blockchain Extension for Home Assistant based on hyperledger besu"
+version: "2.0"
+slug: "blockchain_extension"
+init: false
+url: https://github.com/aguspray001/home-assistant-stream-agent
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+environment:
+  JWT_USER: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJiNzdjMWNmNjY4MmU0MTlmYjdhNWM2MjUwNjNkNTY5NCIsImlhdCI6MTY5MTMzNTYzMiwiZXhwIjoyMDA2Njk1NjMyfQ.PAUiuMY3TDWRad2Yryim7qEn0hOhB21F2qfSav0VNTE"
+  KAFKA_URI: "10.0.2.15"
+  KAFKA_PORT: "9092"
+  WEBSOCKET_URI: "10.0.2.28"
+  WEBSOCKET_PORT: "8123"
+  PRIVATE_KEY: "8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63"
+  PRIVATE_KEY_TEST: "0x6de1ef6Ff65386E9cDA873edBA9Ab9a5109c6d25"
+  BLOCKCHAIN_PORT: "8545"
+  BLOCKCHAIN_URI: "10.0.2.15"
+options:
+  blockchain_addres: "10.0.2.15"
+  blockchain_port: 8545
+  jwt_user: ""
+  kafka_uri: "10.0.2.15"
+  kafka_port: 9092
+  websocket_uri: "10.0.2.28"
+  websocket_port: 8123
+  private_key: ""
+schema:
+  blockchain_addres: str?
+  blockchain_port: int?
+  jwt_user: str?
+  kafka_uri: str?
+  kafka_port: int?
+  websocket_uri: str?
+  websocket_port: int?
+  private_key: str?

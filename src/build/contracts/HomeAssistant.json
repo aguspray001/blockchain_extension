@@ -1,0 +1,1171 @@
+{
+  "contractName": "HomeAssistant",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "count",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "entityState",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "data",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "date",
+          "type": "string"
+        },
+        {
+          "internalType": "address payable",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_data",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_date",
+          "type": "string"
+        },
+        {
+          "internalType": "address payable",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "createHistory",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"count\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"_data\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_date\",\"type\":\"string\"},{\"internalType\":\"address payable\",\"name\":\"_user\",\"type\":\"address\"}],\"name\":\"createHistory\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"entityState\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"data\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"date\",\"type\":\"string\"},{\"internalType\":\"address payable\",\"name\":\"user\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/HomeAssistant.sol\":\"HomeAssistant\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/HomeAssistant.sol\":{\"keccak256\":\"0xa06d96a259d7a781dba77fc460cad8ec3e2600af12df02b9193c67cdab209d05\",\"urls\":[\"bzz-raw://d7872b08953be82e5a1abcf0d377dced4085fb00697255cd3abc696b1398ed7b\",\"dweb:/ipfs/QmXA3cPYk4WGT6KuWAQxUAXRNsH2hVBgb6Lobntgg6aUNx\"]}},\"version\":1}",
+  "bytecode": "0x60806040526000805534801561001457600080fd5b50610562806100246000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806306661abd14610046578063c6681d3c14610060578063db5a61a41461019a575b600080fd5b61004e6102ae565b60408051918252519081900360200190f35b6101986004803603606081101561007657600080fd5b81019060208101813564010000000081111561009157600080fd5b8201836020820111156100a357600080fd5b803590602001918460018302840111640100000000831117156100c557600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250929594936020810193503591505064010000000081111561011857600080fd5b82018360208201111561012a57600080fd5b8035906020019184600183028401116401000000008311171561014c57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250929550505090356001600160a01b031691506102b49050565b005b6101b7600480360360208110156101b057600080fd5b5035610349565b604051808060200180602001846001600160a01b03166001600160a01b03168152602001838103835286818151815260200191508051906020019080838360005b838110156102105781810151838201526020016101f8565b50505050905090810190601f16801561023d5780820380516001836020036101000a031916815260200191505b50838103825285518152855160209182019187019080838360005b83811015610270578181015183820152602001610258565b50505050905090810190601f16801561029d5780820380516001836020036101000a031916815260200191505b509550505050505060405180910390f35b60005481565b6000805460019081018083556040805160608101825287815260208082018890526001600160a01b0387168284015292855292825290922081518051929391926103019284920190610492565b50602082810151805161031a9260018501920190610492565b5060409190910151600290910180546001600160a01b0319166001600160a01b03909216919091179055505050565b60016020818152600092835260409283902080548451600294821615610100026000190190911693909304601f81018390048302840183019094528383529283918301828280156103db5780601f106103b0576101008083540402835291602001916103db565b820191906000526020600020905b8154815290600101906020018083116103be57829003601f168201915b505050505090806001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104795780601f1061044e57610100808354040283529160200191610479565b820191906000526020600020905b81548152906001019060200180831161045c57829003601f168201915b505050600290930154919250506001600160a01b031683565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106104d357805160ff1916838001178555610500565b82800160010185558215610500579182015b828111156105005782518255916020019190600101906104e5565b5061050c929150610510565b5090565b61052a91905b8082111561050c5760008155600101610516565b9056fea265627a7a72315820f7fefda9d566878b72c8a050e13fa9e6aaff0467408996dc2ae22f8c529ce06964736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c806306661abd14610046578063c6681d3c14610060578063db5a61a41461019a575b600080fd5b61004e6102ae565b60408051918252519081900360200190f35b6101986004803603606081101561007657600080fd5b81019060208101813564010000000081111561009157600080fd5b8201836020820111156100a357600080fd5b803590602001918460018302840111640100000000831117156100c557600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250929594936020810193503591505064010000000081111561011857600080fd5b82018360208201111561012a57600080fd5b8035906020019184600183028401116401000000008311171561014c57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250929550505090356001600160a01b031691506102b49050565b005b6101b7600480360360208110156101b057600080fd5b5035610349565b604051808060200180602001846001600160a01b03166001600160a01b03168152602001838103835286818151815260200191508051906020019080838360005b838110156102105781810151838201526020016101f8565b50505050905090810190601f16801561023d5780820380516001836020036101000a031916815260200191505b50838103825285518152855160209182019187019080838360005b83811015610270578181015183820152602001610258565b50505050905090810190601f16801561029d5780820380516001836020036101000a031916815260200191505b509550505050505060405180910390f35b60005481565b6000805460019081018083556040805160608101825287815260208082018890526001600160a01b0387168284015292855292825290922081518051929391926103019284920190610492565b50602082810151805161031a9260018501920190610492565b5060409190910151600290910180546001600160a01b0319166001600160a01b03909216919091179055505050565b60016020818152600092835260409283902080548451600294821615610100026000190190911693909304601f81018390048302840183019094528383529283918301828280156103db5780601f106103b0576101008083540402835291602001916103db565b820191906000526020600020905b8154815290600101906020018083116103be57829003601f168201915b505050505090806001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104795780601f1061044e57610100808354040283529160200191610479565b820191906000526020600020905b81548152906001019060200180831161045c57829003601f168201915b505050600290930154919250506001600160a01b031683565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106104d357805160ff1916838001178555610500565b82800160010185558215610500579182015b828111156105005782518255916020019190600101906104e5565b5061050c929150610510565b5090565b61052a91905b8082111561050c5760008155600101610516565b9056fea265627a7a72315820f7fefda9d566878b72c8a050e13fa9e6aaff0467408996dc2ae22f8c529ce06964736f6c63430005100032",
+  "sourceMap": "68:465:1:-;;;118:1;98:21;;68:465;8:9:-1;5:2;;;30:1;27;20:12;5:2;68:465:1;;;;;;;",
+  "deployedSourceMap": "68:465:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;68:465:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;98:21;;;:::i;:::-;;;;;;;;;;;;;;;;311:219;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;311:219:1;;;;;;;;21:11:-1;5:28;;2:2;;;46:1;43;36:12;2:2;311:219:1;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;311:219:1;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;311:219:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;81:16;;74:27;;;;-1:-1;311:219:1;;;;;;;;-1:-1:-1;311:219:1;;-1:-1:-1;;21:11;5:28;;2:2;;;46:1;43;36:12;2:2;311:219:1;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;311:219:1;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;311:219:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;81:16;;74:27;;;;-1:-1;311:219:1;;-1:-1:-1;;;311:219:1;;-1:-1:-1;;;;;311:219:1;;-1:-1:-1;311:219:1;;-1:-1:-1;311:219:1:i;:::-;;255:47;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;255:47:1;;:::i;:::-;;;;;;;;;;;-1:-1:-1;;;;;255:47:1;-1:-1:-1;;;;;255:47:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;255:47:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;255:47:1;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;255:47:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;98:21;;;;:::o;311:219::-;451:5;:7;;;;;;;;;490:32;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;490:32:1;;;;;;469:18;;;;;;;;;:53;;;;490:32;;469:18;;:53;;:18;;:53;;;:::i;:::-;-1:-1:-1;469:53:1;;;;;;;;;;;;;;;;:::i;:::-;-1:-1:-1;469:53:1;;;;;;;;;;;;-1:-1:-1;;;;;;469:53:1;-1:-1:-1;;;;;469:53:1;;;;;;;;;-1:-1:-1;;;311:219:1:o;255:47::-;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;255:47:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;255:47:1;;;;;;;-1:-1:-1;;;;;;;255:47:1;;:::o;68:465::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;68:465:1;;;-1:-1:-1;68:465:1;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "//SPDX-License-Identifier: MIT\r\npragma solidity >=0.4.22 <0.7.0;\r\n\r\ncontract HomeAssistant {\r\n    uint public count = 0; //state variable\r\n\r\n    struct EntityState {\r\n        string data;\r\n        string date;\r\n        address payable user;\r\n    }\r\n\r\n    mapping(uint => EntityState) public entityState;\r\n\r\n    function createHistory(\r\n        string memory _data,\r\n        string memory _date,\r\n        address payable _user\r\n    ) public {\r\n        count++;\r\n        entityState[count] = EntityState(_data, _date, _user);\r\n    }\r\n}\r\n",
+  "sourcePath": "C:\\Users\\agusp\\OneDrive\\Documents\\kuliah\\Thesis\\program\\fix\\backup-smartcontract\\blockchain-addon_v2\\src\\contracts\\HomeAssistant.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/HomeAssistant.sol",
+    "exportedSymbols": {
+      "HomeAssistant": [
+        56
+      ]
+    },
+    "id": 57,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 18,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:32:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 56,
+        "linearizedBaseContracts": [
+          56
+        ],
+        "name": "HomeAssistant",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 21,
+            "name": "count",
+            "nodeType": "VariableDeclaration",
+            "scope": 56,
+            "src": "98:21:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 19,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "98:4:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 20,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "118:1:1",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "HomeAssistant.EntityState",
+            "id": 28,
+            "members": [
+              {
+                "constant": false,
+                "id": 23,
+                "name": "data",
+                "nodeType": "VariableDeclaration",
+                "scope": 28,
+                "src": "175:11:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 22,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "175:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 25,
+                "name": "date",
+                "nodeType": "VariableDeclaration",
+                "scope": 28,
+                "src": "197:11:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 24,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "197:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 27,
+                "name": "user",
+                "nodeType": "VariableDeclaration",
+                "scope": 28,
+                "src": "219:20:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address_payable",
+                  "typeString": "address payable"
+                },
+                "typeName": {
+                  "id": 26,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "219:15:1",
+                  "stateMutability": "payable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "EntityState",
+            "nodeType": "StructDefinition",
+            "scope": 56,
+            "src": "145:102:1",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 32,
+            "name": "entityState",
+            "nodeType": "VariableDeclaration",
+            "scope": 56,
+            "src": "255:47:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_EntityState_$28_storage_$",
+              "typeString": "mapping(uint256 => struct HomeAssistant.EntityState)"
+            },
+            "typeName": {
+              "id": 31,
+              "keyType": {
+                "id": 29,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "263:4:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "255:28:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_EntityState_$28_storage_$",
+                "typeString": "mapping(uint256 => struct HomeAssistant.EntityState)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 30,
+                "name": "EntityState",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 28,
+                "src": "271:11:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_EntityState_$28_storage_ptr",
+                  "typeString": "struct HomeAssistant.EntityState"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 54,
+              "nodeType": "Block",
+              "src": "440:90:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 42,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "451:7:1",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "id": 41,
+                      "name": "count",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21,
+                      "src": "451:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 43,
+                  "nodeType": "ExpressionStatement",
+                  "src": "451:7:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 52,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 44,
+                        "name": "entityState",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 32,
+                        "src": "469:11:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_EntityState_$28_storage_$",
+                          "typeString": "mapping(uint256 => struct HomeAssistant.EntityState storage ref)"
+                        }
+                      },
+                      "id": 46,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 45,
+                        "name": "count",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 21,
+                        "src": "481:5:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "469:18:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_EntityState_$28_storage",
+                        "typeString": "struct HomeAssistant.EntityState storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 48,
+                          "name": "_data",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 34,
+                          "src": "502:5:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 49,
+                          "name": "_date",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 36,
+                          "src": "509:5:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 50,
+                          "name": "_user",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 38,
+                          "src": "516:5:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        ],
+                        "id": 47,
+                        "name": "EntityState",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 28,
+                        "src": "490:11:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_struct$_EntityState_$28_storage_ptr_$",
+                          "typeString": "type(struct HomeAssistant.EntityState storage pointer)"
+                        }
+                      },
+                      "id": 51,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "structConstructorCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "490:32:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_EntityState_$28_memory",
+                        "typeString": "struct HomeAssistant.EntityState memory"
+                      }
+                    },
+                    "src": "469:53:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_EntityState_$28_storage",
+                      "typeString": "struct HomeAssistant.EntityState storage ref"
+                    }
+                  },
+                  "id": 53,
+                  "nodeType": "ExpressionStatement",
+                  "src": "469:53:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 55,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createHistory",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 39,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34,
+                  "name": "_data",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 55,
+                  "src": "344:19:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 33,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "344:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 36,
+                  "name": "_date",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 55,
+                  "src": "374:19:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 35,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "374:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 38,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 55,
+                  "src": "404:21:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 37,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "404:15:1",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "333:99:1"
+            },
+            "returnParameters": {
+              "id": 40,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "440:0:1"
+            },
+            "scope": 56,
+            "src": "311:219:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 57,
+        "src": "68:465:1"
+      }
+    ],
+    "src": "32:503:1"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/HomeAssistant.sol",
+      "exportedSymbols": {
+        "HomeAssistant": [
+          56
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".22",
+            "<",
+            "0.7",
+            ".0"
+          ]
+        },
+        "id": 18,
+        "name": "PragmaDirective",
+        "src": "32:32:1"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            56
+          ],
+          "name": "HomeAssistant",
+          "scope": 57
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "count",
+              "scope": 56,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 19,
+                "name": "ElementaryTypeName",
+                "src": "98:4:1"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "30",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "int_const 0",
+                  "value": "0"
+                },
+                "id": 20,
+                "name": "Literal",
+                "src": "118:1:1"
+              }
+            ],
+            "id": 21,
+            "name": "VariableDeclaration",
+            "src": "98:21:1"
+          },
+          {
+            "attributes": {
+              "canonicalName": "HomeAssistant.EntityState",
+              "name": "EntityState",
+              "scope": 56,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "data",
+                  "scope": 28,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 22,
+                    "name": "ElementaryTypeName",
+                    "src": "175:6:1"
+                  }
+                ],
+                "id": 23,
+                "name": "VariableDeclaration",
+                "src": "175:11:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "date",
+                  "scope": 28,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 24,
+                    "name": "ElementaryTypeName",
+                    "src": "197:6:1"
+                  }
+                ],
+                "id": 25,
+                "name": "VariableDeclaration",
+                "src": "197:11:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "user",
+                  "scope": 28,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "address payable",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "stateMutability": "payable",
+                      "type": "address payable"
+                    },
+                    "id": 26,
+                    "name": "ElementaryTypeName",
+                    "src": "219:15:1"
+                  }
+                ],
+                "id": 27,
+                "name": "VariableDeclaration",
+                "src": "219:20:1"
+              }
+            ],
+            "id": 28,
+            "name": "StructDefinition",
+            "src": "145:102:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "entityState",
+              "scope": 56,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(uint256 => struct HomeAssistant.EntityState)",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(uint256 => struct HomeAssistant.EntityState)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 29,
+                    "name": "ElementaryTypeName",
+                    "src": "263:4:1"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "EntityState",
+                      "referencedDeclaration": 28,
+                      "type": "struct HomeAssistant.EntityState"
+                    },
+                    "id": 30,
+                    "name": "UserDefinedTypeName",
+                    "src": "271:11:1"
+                  }
+                ],
+                "id": 31,
+                "name": "Mapping",
+                "src": "255:28:1"
+              }
+            ],
+            "id": 32,
+            "name": "VariableDeclaration",
+            "src": "255:47:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "createHistory",
+              "scope": 56,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_data",
+                      "scope": 55,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 33,
+                        "name": "ElementaryTypeName",
+                        "src": "344:6:1"
+                      }
+                    ],
+                    "id": 34,
+                    "name": "VariableDeclaration",
+                    "src": "344:19:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_date",
+                      "scope": 55,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 35,
+                        "name": "ElementaryTypeName",
+                        "src": "374:6:1"
+                      }
+                    ],
+                    "id": 36,
+                    "name": "VariableDeclaration",
+                    "src": "374:19:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_user",
+                      "scope": 55,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address payable",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "payable",
+                          "type": "address payable"
+                        },
+                        "id": 37,
+                        "name": "ElementaryTypeName",
+                        "src": "404:15:1"
+                      }
+                    ],
+                    "id": 38,
+                    "name": "VariableDeclaration",
+                    "src": "404:21:1"
+                  }
+                ],
+                "id": 39,
+                "name": "ParameterList",
+                "src": "333:99:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 40,
+                "name": "ParameterList",
+                "src": "440:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "++",
+                          "prefix": false,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 21,
+                              "type": "uint256",
+                              "value": "count"
+                            },
+                            "id": 41,
+                            "name": "Identifier",
+                            "src": "451:5:1"
+                          }
+                        ],
+                        "id": 42,
+                        "name": "UnaryOperation",
+                        "src": "451:7:1"
+                      }
+                    ],
+                    "id": 43,
+                    "name": "ExpressionStatement",
+                    "src": "451:7:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "struct HomeAssistant.EntityState storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "struct HomeAssistant.EntityState storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 32,
+                                  "type": "mapping(uint256 => struct HomeAssistant.EntityState storage ref)",
+                                  "value": "entityState"
+                                },
+                                "id": 44,
+                                "name": "Identifier",
+                                "src": "469:11:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 21,
+                                  "type": "uint256",
+                                  "value": "count"
+                                },
+                                "id": 45,
+                                "name": "Identifier",
+                                "src": "481:5:1"
+                              }
+                            ],
+                            "id": 46,
+                            "name": "IndexAccess",
+                            "src": "469:18:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": true,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "struct HomeAssistant.EntityState memory",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_string_memory_ptr",
+                                      "typeString": "string memory"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_string_memory_ptr",
+                                      "typeString": "string memory"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_address_payable",
+                                      "typeString": "address payable"
+                                    }
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 28,
+                                  "type": "type(struct HomeAssistant.EntityState storage pointer)",
+                                  "value": "EntityState"
+                                },
+                                "id": 47,
+                                "name": "Identifier",
+                                "src": "490:11:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 34,
+                                  "type": "string memory",
+                                  "value": "_data"
+                                },
+                                "id": 48,
+                                "name": "Identifier",
+                                "src": "502:5:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 36,
+                                  "type": "string memory",
+                                  "value": "_date"
+                                },
+                                "id": 49,
+                                "name": "Identifier",
+                                "src": "509:5:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 38,
+                                  "type": "address payable",
+                                  "value": "_user"
+                                },
+                                "id": 50,
+                                "name": "Identifier",
+                                "src": "516:5:1"
+                              }
+                            ],
+                            "id": 51,
+                            "name": "FunctionCall",
+                            "src": "490:32:1"
+                          }
+                        ],
+                        "id": 52,
+                        "name": "Assignment",
+                        "src": "469:53:1"
+                      }
+                    ],
+                    "id": 53,
+                    "name": "ExpressionStatement",
+                    "src": "469:53:1"
+                  }
+                ],
+                "id": 54,
+                "name": "Block",
+                "src": "440:90:1"
+              }
+            ],
+            "id": 55,
+            "name": "FunctionDefinition",
+            "src": "311:219:1"
+          }
+        ],
+        "id": 56,
+        "name": "ContractDefinition",
+        "src": "68:465:1"
+      }
+    ],
+    "id": 57,
+    "name": "SourceUnit",
+    "src": "32:503:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "1337": {
+      "events": {},
+      "links": {},
+      "address": "0x9a3DBCa554e9f6b9257aAa24010DA8377C57c17e",
+      "transactionHash": "0x667d62499d23a252d955e6d5a541c73f0fc0440c3a8d7db048be4ec00809014d"
+    }
+  },
+  "schemaVersion": "3.4.13",
+  "updatedAt": "2023-06-22T06:39:53.879Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
